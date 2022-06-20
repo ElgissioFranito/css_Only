@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(14, 58, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    box-shadow: 3px 0px 50px rgb(14, 58, 255);
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-top: 5px rgb(255, 255, 255) solid;
+    border-right: 5px rgb(255, 255, 255) solid;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+a:hover {
+    width: 300px;
+    /* transition : durée de transition pour arriver a a:hover */
+    transition: 0.3s;
+    /*  transition-delay : durée du plane sur a pour avoir a:hover */
+    transition-delay: 0.2s;
+}
+
+a:hover::before {
+    /* translate : mbole tsy hay tsara */
+    transform: rotate(45deg) translate(70px, -70px);
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+
+span {
+    opacity: 0%;
+    color: aliceblue;
+    font-size: x-large;
+    font-weight: 800;
+    transition: 0.1s;
+    transform: translate(-300px);
+
+}
+
+a:hover span {
+    opacity: 100%;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transform: translate(0px);
+}
